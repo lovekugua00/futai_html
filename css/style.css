@@ -1,5 +1,14 @@
 /**********重置部分样式************/
-li{list-style: none;}
+body{
+	background-color: #DCDCDB;
+}
+li{
+	list-style: none;
+}
+.container{
+	background-color: #FFF;
+	font-family: "Helvetica Neue",Helvetica,sans-serif,Arial;
+}
 
 
 /***********头部导航**************/
@@ -21,10 +30,15 @@ li{list-style: none;}
 	position: relative;
 }
 .top-nav .logo{
+	background: url(../images/logo.png) no-repeat;
+	_background: url(../images/logo.gif) no-repeat;
 	position: absolute;
 	top: -17px;
 	left: 90px;
+	width: 240px;
+	height: 70px;
 }
+
 .top-nav .nav-items{
 	float: right;
 	margin: 0;
@@ -37,7 +51,7 @@ li{list-style: none;}
 	list-style: none;
 }
 .top-nav .nav-items li.online-mall{
-    background: url("../images/sprites.gif") no-repeat scroll 15px 3px transparent;
+    background: url("../images/cart.jpg") no-repeat scroll 16px 6px #C7000A;
     padding-left: 36px;
     text-align: left;
     width: 150px;
@@ -58,10 +72,15 @@ li{list-style: none;}
 	margin: 0;
 }
 .top-gallery .image-list li{
+	display: none;
 	position: absolute;
+	top: 0;
+	left: 0;
 	z-index: 999;
 }
-
+.top-gallery .image-list li.focus{
+	display: block;
+}
 /********头部搜索***********/
 .top-search-box{
 	background: url(../images/back/func_white_bg.jpg) 0 -4px no-repeat;
@@ -184,23 +203,106 @@ li{list-style: none;}
     border: 1px solid #EDEDED;
     border-style: none solid solid;
     height: 120px;
-    margin: 0 auto;
-    padding-top: 15px;
+    margin: 0 auto 25px;
+    padding-top: 1em;
     text-align: center;
     top: -6px;
     width: 772px;
 }
-.footer a{
+.footer p a{
+    padding: 0 6px;
     color: #888;
     font-size: 11px;
-    padding: 0 6px;
+    letter-spacing: -1px;
+}
+.footer p a:hover{
+	color: #888;
 }
 .footer .domain-info{
-	margin: 0 15px;
-	text-align: left;
-	color: #888;
+	position: absolute;
+    bottom: 1em;
+    left: 0;
+    right: 0;
+    width: 96%;
+    margin: 0 15px;   
+    color: #888888;
+    text-align: left;
 }
 .footer .domain-info label{
 	display: inline;
 	 margin-right: 25px;
+}
+.footer .domain-info label span{
+	padding:0 2px;
+	color: #222;
+}
+.footer .weibo-focus{
+    position: absolute;
+    right: -3em;
+    top: 0;
+}
+/*********公司简介*********/
+.profile-wrap{
+	width: 792px;
+	margin: 80px auto 0;
+}
+.site-map{
+	text-align: right;
+	font-size: 1em;
+}
+.site-map a{
+	color: #000;
+	padding:0 2px;
+}
+.site-map .right-arrow{
+	font-size: 18px;
+	color: #888;
+	vertical-align: middle;
+}
+.site-map .red{
+	color: #AE0405;
+}
+
+/******公司简介导航********/
+.profile-wrap .profile-box{
+	min-height: 500px;
+	_height: 500px;
+}
+.profile-box .left-nav{
+    background: url("../images/back/left_nav_bg.jpg") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 458px;
+    width: 120px;
+    color: #FFF;
+    text-align: center;
+}
+.profile-box .left-nav dt{
+    color: #FFFFFF;
+    font-size: 22px;
+    margin: 20px 0 12px;
+}
+.profile-box .left-nav dd{
+	height: 32px;
+    margin: 0;       
+}
+.profile-box .left-nav dd.focus{
+	background: url(../images/back/focus_bg_black.gif) 12px 0 no-repeat;
+
+}
+.profile-box .left-nav dd a{
+	color: #FFF;
+	font-weight: bold;
+}
+.profile-box .document{
+	margin-left: 180px;
+}
+.profile-box .document h3{
+    color: #BD0430;
+    margin: 0;
+    padding: 10px 1em;
+}
+.profile-box .document p{
+	color: #444;
+	line-height: 2;
+    text-indent: 2em;
 }
