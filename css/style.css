@@ -282,8 +282,10 @@ li{
     margin: 20px 0 12px;
 }
 .profile-box .left-nav dd{
-	height: 32px;
-    margin: 0;       
+    height: 32px;
+    margin: 0;
+    padding-left: 20px;
+    text-align: left;   
 }
 .profile-box .left-nav dd.focus{
 	background: url(../images/back/focus_bg_black.gif) 12px 0 no-repeat;
