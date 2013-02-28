@@ -34,13 +34,13 @@ image_slider();
 	var $info=$('.product-box .product-info'),$content=$info.find('.info-content'),
 		width=$content.outerWidth();
 
-	$info.mouseover(function(){
+	$info.mouseenter(function(){
 
 		$info.stop().animate({'right':0},600);
 		
 	});
 
-	$info.mouseout(function(){
+	$info.mouseleave(function(){
 
 		$info.stop().animate({'right':-width+'px'},600);
 		
