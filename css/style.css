@@ -377,10 +377,14 @@ li{
 .news-list li a{
 	color: #666;
 }
+/*产品搜索*/
+.profile-box .document form.pull-right{
+	margin-top: 15px;	
+}
 
 /**********产品列表***************/
 .product-list{
-
+	margin-bottom: 15px;
 }
 .product-list .item{
 	display: inline-block;
@@ -390,9 +394,13 @@ li{
 }
 .product-list .item a.normal-pic{
 	display: block;
+	width: 200px;
 }
 .product-list .item a.normal-pic img{
 	width: 200px;
+}
+.product-list .item a.large-pic img{
+	max-width: 200px;
 }
 .product-list .item .info{
 	margin: 5px 0;
