@@ -123,7 +123,7 @@ a,a:link,a:hover,a:visited{
 	color: #FFF;
 }
 #top-nav ul li a{
-	display: block;
+	display: inline-block;
 	padding: 5px 25px;
 	color: #FFF;
 	font-size: 14px;
@@ -133,12 +133,42 @@ a,a:link,a:hover,a:visited{
 	text-decoration: none;
 	color: #DDD;
 }
+#top-nav ul li.focus{
+	background: url(../images/mall/mall_sub_nav_bg.jpg) repeat-x 0 5px;
+}
+#top-nav ul li.focus a{
+	color: #444;
+}
 #top-nav ul li.split span{
 	display: block;
 	width: 1px;
 	height: 15px;
 	background: #ddd;
 	margin: 12px 0 0;
+}
+#top-nav .sub-nav{
+	display: none;
+	background: url(../images/mall/mall_sub_nav_bg.jpg) repeat-x #CCC;
+	position: absolute;
+	top: 37px;
+	z-index: 1999;
+	left: auto;
+	height: 32px;
+	border-radius: 5px;
+}
+#top-nav .sub-nav li{
+	background: url(../images/mall/mall_sub_nav_line.png) no-repeat top right;
+}
+#top-nav .sub-nav li.last{
+	background-image: none;
+}
+#top-nav .sub-nav li a{
+	font-size: 12px;
+	color: #444;
+	padding: 2px 20px;
+}
+#top-nav .sub-nav li a:hover{
+	color: #c11c1e;
 }
 /*producs*/
 ul.products{
@@ -301,6 +331,7 @@ ul.column-two li:hover{
 #footer #site-toolbox dt a{
 	color: #FFF;
 	padding: 0 2px;
+	font-size: 14px;
 }
 #footer #site-toolbox dd{
 	text-align: center;
