@@ -80,12 +80,18 @@ $('#site-toolbox .btn-hide').click(function(){
 });
 
 /*image zoom*/ 
-$('#product-preview .product-zoom dd a').mouseover(function(){
+$('#product-preview .product-zoom dd a').bind('click',function(){
 	$(this).parent().find('.selected').removeClass('selected');
 	$(this).addClass('selected');
 	var $photo=$('#product-preview .product-zoom dt a.photo');
-	
-	$('img',$photo).attr('src',$(this).attr('normal'));
+	// $('img',$photo).attr('src',$(this).attr('normal'));
 });
 
+$('a.gallery').jqzoom({
+    zoomType: 'standard',
+    lens:true,
+    preloadImages: true,
+    title:false,
+    preloadText:''
 
+});
