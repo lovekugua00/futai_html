@@ -79,3 +79,13 @@ $('#site-toolbox .btn-hide').click(function(){
 	$('#site-toolbox').hide();
 });
 
+/*image zoom*/ 
+$('#product-preview .product-zoom dd a').mouseover(function(){
+	$(this).parent().find('.selected').removeClass('selected');
+	$(this).addClass('selected');
+	var $photo=$('#product-preview .product-zoom dt a.photo');
+	
+	$('img',$photo).attr('src',$(this).attr('normal'));
+});
+
+
