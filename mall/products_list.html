@@ -6,9 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="../js/lib/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/mall.css">
-	<link rel="stylesheet" type="text/css" href="../css/jquery.jqzoom.css">
 	<!-- jquery-->
-	<script type="text/javascript" src="../js/jquery.1.7.1.js"></script>
+	<script type="text/javascript" src="../js/jquery.1.8.3.js"></script>
 </head>
 <body>
 
@@ -120,67 +119,110 @@
 
 		<!-- main content -->
 		<div class="main-content">
+
 			<!-- breadcrumb导航 -->
 			<div class="breadcrumb">
 				<a href="#" target="_blank">首页</a>
 				>
-				<a href="#" target="_blank">分机</a>
-				>
-				<a href="#" target="_blank">可视分机</a>
-				>
-				<a href="#" target="_blank">彩色可视分机KTMFS</a>
+				<a href="#" target="_blank">主机</a>
 			</div>
-			
-			<div id="product-preview" class="clearfix">
-				<!-- 商品预览 -->
-				<div class="product-zoom">
-					<dl>
 
-						<dt>
-							<!--href属性是大图地址-->
-							<a href="../images/mall/products/large/triumph_big1.jpg" title="" rel="gal" class="gallery" href="javascript:;"><img  src="../images/mall/products/normal/triumph_small1.jpg"/></a>
-						</dt>
-						
-						<dd>
-							<!-- 注意rel属性 -->
-							<a class="selected" rel="{gallery: 'gal', smallimage: '../images/mall/products/normal/triumph_small1.jpg',largeimage: '../images/mall/products/large/triumph_big1.jpg'}" href="javascript:;">
-								<img src="../images/mall/products/thumb/triumph_thumb1.jpg"/>
-							</a>
-							<a rel="{gallery: 'gal', smallimage: '../images/mall/products/normal/triumph_small2.jpg',largeimage: '../images/mall/products/large/triumph_big2.jpg'}" href="javascript:;">
-								<img src="../images/mall/products/thumb/triumph_thumb2.jpg"/>
-							</a>
-
-						</dd>
-					
-					</dl>
+			<!-- 搜索栏 -->
+			<div class="filter-group">
+				<div class="fr">
+					<form>
+					<span>关键字：</span><input class="keywords" type="text" class=""/>
+					<span>价格：</span><input class="floor" type="text" class=""/> 
+					<span>到</span><input type="text" class="ceil"/>
+					<button type="submit" class="btn">搜索</button>
+					</form>
 				</div>
-				<div class="product-info">
-					<div class="p-name"><h2>可视分机LG 42LS3100-CE 42英寸全高清LED液晶电视</h2></div>
-					<p class="p-version">型号：<span>KSC80075</span></p>
-					<p class="p-price">价格：<span>888元</span></p>
-					<p class="p-discount">促销：<span>880元</span></p>
-					<p class="p-express">配送：<a href="javascript:;"><span>至南昌</span></a><span>快递<em>8</em>元</span></p>	
-					<p class="p-version">分	类：<span>可视分机</span></p>
-					<div class="p-counts">数量：<a href="javascript:;" class="btn btn-mini" title="减一">-</a><input id="buy-counts" type="text"/><a href="javascript:;" class="btn btn-mini" title="加一">+</a>
-						<span>(库存<em>53</em>)</span></div>
-
-					<div class="button-group">
-						<button class="btn-buy" title="立即购买"></button>
-						<button class="btn-add" title="加入购物车"></button>
-						<button class="btn-collect" title="添加收藏"></button>
-					</div>				
-				</div>
+				<span>共搜索到<strong>12</strong>个符合条件的商品</span>
 			</div>
-			<!-- 商品大图 -->
-			<div id="producst-larget-images">
+			<!-- 三列商品 -->
+			<ul class="products column-three clearfix">
+				<li>
+					<a class="p-thumb" href="#">
+						<img src="../images/mall/products/mall_p01.jpg" alt=""/>
+					</a>
+					<p class="p-name">
+						<span>编码可视主机  KSC800BL/ID</span>
+					</p>
+					<p class="p-price">						
+						<span>￥988</span>
+					</p>
+				</li>
+				<li>
+					<a class="p-thumb" href="#">
+						<img src="../images/mall/products/mall_p01.jpg" alt=""/>
+					</a>
+					<p class="p-name">
+						<span>编码可视主机  KSC800BL/ID</span>
+					</p>
+					<p class="p-price">						
+						<span>￥988</span>
+					</p>
+				</li>
+				<li>
+					<a class="p-thumb" href="#">
+						<img src="../images/mall/products/mall_p01.jpg" alt=""/>
+					</a>
+					<p class="p-name">
+						<span>编码可视主机  KSC800BL/ID</span>
+					</p>
+					<p class="p-price">						
+						<span>￥988</span>
+					</p>
+				</li>
+				<li>
+					<a class="p-thumb" href="#">
+						<img src="../images/mall/products/mall_p01.jpg" alt=""/>
+					</a>
+					<p class="p-name">
+						<span>编码可视主机  KSC800BL/ID</span>
+					</p>
+					<p class="p-price">						
+						<span>￥988</span>
+					</p>
+				</li>
+				<li>
+					<a class="p-thumb" href="#">
+						<img src="../images/mall/products/mall_p01.jpg" alt=""/>
+					</a>
+					<p class="p-name">
+						<span>编码可视主机  KSC800BL/ID</span>
+					</p>
+					<p class="p-price">						
+						<span>￥988</span>
+					</p>
+				</li>
+				<li>
+					<a class="p-thumb" href="#">
+						<img src="../images/mall/products/mall_p01.jpg" alt=""/>
+					</a>
+					<p class="p-name">
+						<span>编码可视主机  KSC800BL/ID</span>
+					</p>
+					<p class="p-price">						
+						<span>￥988</span>
+					</p>
+				</li>												
+			</ul>
 
-				<img src="../images/mall/products/example1.jpg" alt=""/>
-
+			<div class="pagenation">
+				<a href="#" class="btn">上一页</a>
+				<a href="#" class="btn">1</a>
+				<a href="#" class="btn">2</a>
+				<a href="#" class="btn disabled">3</a>
+				<a href="#" class="btn">4</a>
+				<a href="#" class="btn">下一页</a>
+				<span>到</span>
+				<input type="text" class="input-page"/>
+				<span>页</span>
+				<button class="btn btn-primary">确定</button>
 			</div>
-
 		</div>
 	</div>
-
 
 	<div id="footer">
 		<div class="container">
@@ -241,9 +283,8 @@
 							<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 							<a class="jiathis_counter_style"></a>
 						</div>
-
 						<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1354497626767350" charset="utf-8"></script>
-						 JiaThis Button END -->
+						<!-- JiaThis Button END -->
 					</div>
 					<a href="#" target="_blank">关于福泰</a>
 					<span>|</span>
@@ -282,14 +323,7 @@
 			<dd class="c5"><a href="#">关于福泰</a></dd>
 		</dl>
 	</div>
-
-	
 	<!-- 网站通用的js -->
-	<script type="text/javascript" src="../js/jquery.jqzoom-core-pack.js"></script>	
-
 	<script type="text/javascript" src="../js/site.js"></script>
-	
-	
-	
 </body>
 </html>

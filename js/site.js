@@ -51,7 +51,7 @@ var image_slider=function  () {
 		clearTimeout(timerId);
 		timerId=null;
 		$(list[index]).show();
-		$(list[now]).stop(true,true).fadeOut('300',function(){
+		$(list[now]).stop().fadeOut('300',function(){
 
 			S.find('a:eq('+now+')').removeClass('selected');
 			S.find('a:eq('+index+')').addClass('selected');			

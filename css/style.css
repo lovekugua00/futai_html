@@ -503,4 +503,5 @@ li{
 }
 .pagenation input.input-page{
 	width: 20px;
+	margin: 0 5px;
 }
