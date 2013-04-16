@@ -382,7 +382,7 @@ ul.column-two li:hover{
 	padding: 10px;
 	background-color: #ddd;
 	line-height: 40px;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 	height: 40px;
 	border-radius: 4px;
 }
@@ -397,6 +397,49 @@ ul.column-two li:hover{
 }
 .filter-group .fr button{
 	margin-bottom: 10px;
+}
+.sort-group{
+	padding: 10px;
+	border:1px solid #DDD;
+	border-radius: 5px;
+	vertical-align: bottom;
+}
+.sort-group a{
+	position: relative;
+	display: inline-block;
+	padding: 0 15px 0 5px;
+	border:1px solid #DDD;
+	height: 20px;
+	line-height: 20px;
+}
+.sort-group a i{
+	background: url(../images/mall/mall_arrow.png) no-repeat -3px -1px;
+	position: absolute;
+	display: inline-block;
+	width: 7px;
+	height: 10px;
+	top: 6px;
+	right: 6px;
+	left: auto;
+}
+.sort-group a i.desc{
+	background-position: -3px -1px;
+}
+.sort-group a.active i.desc{
+	background-position: -11px -1px;
+}
+.sort-group a i.asc{
+	background-position: -19px -1px;
+}
+.sort-group a.active i.asc{
+	background-position: -27px -1px;
+}
+.sort-group a.active,.sort-group a:hover{
+	text-decoration: none;
+	color: #c31e21;
+}
+.sort-group .check{
+	margin-left: 15px;
 }
 #product-preview{
 
