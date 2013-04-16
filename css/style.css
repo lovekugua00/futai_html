@@ -82,6 +82,27 @@ li{
 	display: block;
 	z-index: 999;
 }
+.top-gallery .top-gallery-selector{
+    left: auto;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 350px;
+    z-index: 9999;
+}
+.top-gallery .top-gallery-selector a{
+	background-color: #240302;
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	font-size: 0;
+	border-radius: 100%;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.top-gallery .top-gallery-selector a.selected{
+	background-color: #C7000A;
+}
 /********头部搜索***********/
 .top-search-box{
 	background: url(../images/back/func_white_bg.jpg) 0 -4px no-repeat;

@@ -7,23 +7,72 @@
 
 /* 首页产品展示幻灯效果*/
 var image_slider=function  () {
-	var list=$('.top-gallery .image-list li')
+	var top_gallery=$('.top-gallery')
+	,list=$('.top-gallery .image-list li')
+	,S
 	,n=list.length
-	,i=0
-	,timer=4*1000;
-	var slide=function(){
+	,now=0
+	,timer=3*1000
+	,timerId=null;
 
-		var next=i==n-1?0:i+1;
-		$(list[next]).show();
-		$(list[i]).fadeOut(1000,function(){
+	top_gallery.mouseover(function(){
+		clearTimeout(timerId);
+		timerId=null;
+	});
+	top_gallery.mouseout(function(){
+		slide();
+	});
+	var createSelecor = function(){
+		S=$('<div class="top-gallery-selector"></div>'),str='';
+		for(var j=0;j<n;j++){
+			var c=j?'':'selected';
+			str+='<a class='+c+' href="javascript:;" >'+j+'</a>';
+		}
+		S.html(str);
+		top_gallery.append(S);
+		var time=null;
+		S.find('a').mouseover(function(){
+			var index=parseInt($(this).text());		
+			if(now!=index){		
+				time = setTimeout(function(){
 
-			i=next;
+					slideTo(index);
+
+				},100);
+				
+			}
+		});
+		S.find('a').mouseout(function(){
+			time&&clearTimeout(time);
+		});
+	};
+
+	var slideTo = function(index){
+		clearTimeout(timerId);
+		timerId=null;
+		$(list[index]).show();
+		$(list[now]).stop(true,true).fadeOut('300',function(){
+
+			S.find('a:eq('+now+')').removeClass('selected');
+			S.find('a:eq('+index+')').addClass('selected');			
+			now=index;
 			$(this).css('zIndex',998);
-			$(list[next]).css('zIndex',999);			
+			$(list[index]).css('zIndex',999);			
 
 		});
 	};
-	setInterval(slide,timer);
+	var slide=function(){
+
+		timerId&&clearTimeout(timerId);
+		timerId = setTimeout(function(){
+			var next=now==n-1?0:now+1;
+			slideTo(next);
+			slide();
+		},timer);
+	};
+
+	createSelecor();
+	slide();
 };
 
 image_slider();
@@ -80,18 +129,23 @@ $('#site-toolbox .btn-hide').click(function(){
 });
 
 /*image zoom*/ 
+
+var $gallery = $('#product-preview a.gallery');
 $('#product-preview .product-zoom dd a').bind('click',function(){
 	$(this).parent().find('.selected').removeClass('selected');
 	$(this).addClass('selected');
-	var $photo=$('#product-preview .product-zoom dt a.photo');
-	// $('img',$photo).attr('src',$(this).attr('normal'));
 });
 
-$('a.gallery').jqzoom({
-    zoomType: 'standard',
-    lens:true,
-    preloadImages: true,
-    title:false,
-    preloadText:''
 
-});
+if($gallery.length>0){
+
+	$gallery.jqzoom({		
+	    zoomType: 'standard',
+	    lens:true,
+	    preloadImages: true,
+	    title:false,
+	    preloadText:''
+	});
+
+};
+
