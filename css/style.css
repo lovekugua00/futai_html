@@ -66,6 +66,9 @@ li{
 
 
 /**********头部幻灯****************/
+.top-gallery{
+	position: relative;
+}
 .top-gallery .image-list{
 	position: relative;
 	height: 378px;
